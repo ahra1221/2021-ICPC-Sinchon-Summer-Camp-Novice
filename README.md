@@ -1,1 +1,3 @@
-# 2021-ICPC-Sinchon-Summer-Camp-Novice
+# 2021-ICPC-Summer-Camp Novice
+
+# BOJ문제 cpp 풀이
