@@ -1,1 +1,1 @@
-# 2021-ICPC-Summer-Camp Novice
+# 2021 ICPC SummerCamp Novice
