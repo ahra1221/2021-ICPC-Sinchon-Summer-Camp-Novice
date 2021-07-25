@@ -1,6 +1,5 @@
 /*
-버블소트는 한 번 진행될 때마다 각 숫자 좌측으로 한 칸씩 이동이 가능
-
+bubble sort는 한 번 진행될 때마다 각 숫자 좌측으로 한 칸씩 이동
 */
 
 #include <iostream>
@@ -26,7 +25,7 @@ int main() {
 	int result = 0;
 	for (int i = 0; i < n; i++) {
 		result = max(result, v[i].second - i);
-    //result와 처음인덱스와 현재 인덱스의 차이의 max값으로 result 갱신
+   	  //result와 처음인덱스와 현재 인덱스의 차이의 max값으로 result 갱신
 	  //해당 숫자에 저장되어있는 인덱스와 정렬 기준 인덱스를 뺀 값=(좌측으로 이동한 횟수-1)
   }
 	cout << result + 1 << '\n';
