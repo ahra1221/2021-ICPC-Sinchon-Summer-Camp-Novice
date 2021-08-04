@@ -30,20 +30,20 @@ int main() {
   // 하나의 직사각형을 세개의 직사각형으로 나눌 수 있는 경우는 총 6가지
 	for (int a = 1; a < n; a++) { // 가로, 세로 섞여서 
 		for (int b = 1; b < m; b++) {
-			ans = max(ans, rec[a][b] * (rec[n][b] - rec[a][b])*(rec[n][m] - rec[n][b]));
-			ans = max(ans, rec[n][b] * (rec[a][m] - rec[a][b])*(rec[n][m] - rec[n][b] - rec[a][m] + rec[a][b]));
-			ans = max(ans, rec[a][m] * (rec[n][b] - rec[a][b])*(rec[n][m] - rec[n][b] - rec[a][m] + rec[a][b]));
-			ans = max(ans, rec[a][b] * (rec[a][m] - rec[a][b])*(rec[n][m] - rec[a][m]));
+			ans = max(ans, rec[a][b] * (rec[n][b] - rec[a][b])*(rec[n][m] - rec[n][b])); //1번 경우
+			ans = max(ans, rec[n][b] * (rec[a][m] - rec[a][b])*(rec[n][m] - rec[n][b] - rec[a][m] + rec[a][b])); //2번 경우
+			ans = max(ans, rec[a][m] * (rec[n][b] - rec[a][b])*(rec[n][m] - rec[n][b] - rec[a][m] + rec[a][b])); //3번 경우
+			ans = max(ans, rec[a][b] * (rec[a][m] - rec[a][b])*(rec[n][m] - rec[a][m])); //4번 경우
 		}
 	}
 
-	for (int a = 1; a <= m - 2; a++) { // 세로로 3개
+	for (int a = 1; a <= m - 2; a++) { // 세로로 3개 - 5번 경우
 		for (int b = a + 1; b <= m - 1; b++) {
 			ans = max(ans, rec[n][a] * (rec[n][b] - rec[n][a])*(rec[n][m] - rec[n][b]));
 		}
 	}
 
-	for (int a = 1; a <= n - 2; a++) { // 가로로 3개
+	for (int a = 1; a <= n - 2; a++) { // 가로로 3개 - 6번 경우
 		for (int b = a + 1; b <= n - 1; b++) {
 			ans = max(ans, rec[a][m] * (rec[b][m] - rec[a][m])*(rec[n][m] - rec[b][m]));
 		}
